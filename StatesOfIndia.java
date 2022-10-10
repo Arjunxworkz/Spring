@@ -44,6 +44,23 @@ public class StatesOfIndia {
 		list.stream().forEach((li) -> {System.out.println(li.toLowerCase());});
 		System.out.println("=================");
 		list.stream().distinct().collect(Collectors.toList());
+		list.stream().filter((ref)->ref.endsWith("a")).forEach((ref)->System.out.println(ref));
+		System.out.println("----------------------------");
+		list.stream().filter((ref)->ref.startsWith("K")).forEach((ref)->System.out.println(ref));
+		System.out.println("----------------------------");
+		list.stream().filter((ref)->ref.contains("L")).forEach((ref)->System.out.println(ref));
+		System.out.println("----------------------------");
+		list.stream().filter((ref)->ref.contains("D")).forEach((ref)->System.out.println(ref));
+		System.out.println("----------------------------");
+		list.stream().filter((ref)->ref.contains("h")).forEach((ref)->System.out.println());
+		list.stream().filter((ref)->ref.contains("r")).forEach((ref)->System.out.println(ref));
+		System.out.println("----------------------------");
+		list.stream().filter((ref)->ref.length()>10).forEach((ref)->System.out.println(ref));
+		System.out.println("----------------------------");
+		list.stream().filter((ref)->ref.length()<5).forEach((ref)->System.out.println(ref));
+		System.out.println("----------------------------");
+	    list.stream().forEach((ref)->System.out.println(new StringBuffer().append(ref).reverse()));
+	    System.out.println("----------------------------");
 
 	}
 
